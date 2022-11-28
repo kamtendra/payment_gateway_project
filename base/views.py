@@ -8,8 +8,8 @@ def home(request):
         amount = 50000
         order_currency = 'INR'
         order_receipt = 'order_receipt_11'
-        client = razorpay.Client(auth=("rzp_test_9nmrK825fjo0Ym", "1f1icPZDRCKvac3lzpOmLSl1"))
-        payment = client.order.create(amount=amount,currency=order_currency,receipt=order_receipt)
+        client = razorpay.Client(auth=("rzp_test_fT3T4W4i5iAWJs", "1ET7fzLzQjUGxiWmH2Q0FfaW"))
+        payment = client.order.create({'amount':amount,'currency':order_currency,'payment_capture':'1'})
     return render(request, 'index.html')
 
 @csrf_exempt
